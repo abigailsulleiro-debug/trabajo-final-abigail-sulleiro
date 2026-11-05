@@ -1,0 +1,39 @@
+/* Variables de color de apoyo */
+gold
+
+.text-warning {
+  color: gold
+}
+
+.border-warning {
+  border-color: #c5a059;
+}
+
+/* Efectos sutiles para el mockup de teléfono */
+.phone-mockup {
+  border-width: 50px ;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 200px;
+    background-color: #111;
+    border-radius: 10px;
+    z-index: 10;
+  }
+}
+
+.btn-dark {
+  background-color: #111111;
+  border-color: #111111;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color:#c5a059;
+    border-color: #c5a059;
+  }
+}

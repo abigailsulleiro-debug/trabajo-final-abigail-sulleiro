@@ -1,0 +1,14 @@
+<article class="producto-card">
+  <img class="producto-card__imagen" [src]="producto.imagen" [alt]="producto.nombre" />
+
+  <div class="producto-card__contenido">
+    <span class="producto-card__categoria">{{ producto.categoria }}</span>
+    <h3>{{ producto.nombre }}</h3>
+    <p>{{ producto.descripcion }}</p>
+
+    <div class="producto-card__footer">
+      <strong>${{ producto.precio }}</strong>
+      <button type="button" (click)="agregarAlCarrito()">Agregar</button>
+    </div>
+  </div>
+</article>

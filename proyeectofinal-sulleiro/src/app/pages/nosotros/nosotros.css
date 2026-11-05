@@ -1,0 +1,121 @@
+
+:root {
+    --blanco-puro: #ffffff;
+    --blanco-fondo: #fcfcfc;
+    --dorado-madrid: #c29b38; 
+    --dorado-oscuro: #a07e2a;
+    --gris-oscuro: #1e1e1e;
+    --gris-suave: #4a4a4a
+}
+
+/* --- Sección Nosotros --- */
+.nosotros-section {
+    background-color: var(--blanco-fondo);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nosotros-container {
+    max-width: 1000px; /* Un ancho ligeramente más estrecho para que los párrafos largos se lean cómodos */
+    width: 100%;
+}
+
+/* --- Bloque Superior (Layout de dos columnas) --- */
+.nosotros-header {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* Equilibrio visual entre la foto y el texto corto inicial */
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* --- Estilo de la Imagen --- */
+.nosotros-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(194, 155, 56, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.nosotros-imagen img:hover {
+    transform: translateY(-3px);
+}
+
+/* --- Texto de Presentación --- */
+.nosotros-presentacion .subtitulo {
+    color: var(--dorado-madrid);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.nosotros-presentacion h2 {
+    color: var(--gris-oscuro);
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.nosotros-presentacion .destacado {
+    font-size: 18px;
+    color: var(--dorado-oscuro);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.nosotros-presentacion p {
+    color: var(--gris-suave);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* --- Bloque de la Historia Completa (Ancho Completo) --- */
+.nosotros-historia-completa {
+    border-top: 1px solid rgba(194, 155, 56, 0.15); /* Separador sutil dorado */
+    padding-top: 35px;
+}
+
+.nosotros-historia-completa p {
+    color: var(--gris-suave);
+    font-size: 16px;
+    line-height: 1.8; /* Mayor espaciado de línea para textos extensos */
+    margin-bottom: 20px;
+    text-align: justify; /* Hace que el bloque de texto largo quede alineado y limpio */
+}
+
+.nosotros-historia-completa strong {
+    color: var(--gris-oscuro);
+}
+
+.nosotros-historia-completa .cierre-epico {
+    font-size: 22px;
+    color: var(--dorado-madrid);
+    font-weight: 700;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+@media (max-width: 850px) {
+    .nosotros-header {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .nosotros-historia-completa p {
+        text-align: left; 
+    }
+}

@@ -1,0 +1,78 @@
+.producto-card {
+  background: #ffffff;
+  border: 1px solid #dfe7f1;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.producto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 28px rgba(15, 23, 42, 0.12);
+}
+
+.producto-card__imagen {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(135deg, #d5e3ff, #f3f7ff);
+}
+
+.producto-card__contenido {
+  padding: 1.1rem;
+}
+
+.producto-card__categoria {
+  display: inline-block;
+  background: #e8f0ff;
+  color: #c5a059;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.producto-card__contenido h3 {
+  margin: 0 0 0.75rem;
+  color: #10213d;
+  font-size: 1.4rem;
+}
+
+.producto-card__contenido p {
+  margin: 0 0 1rem;
+  color: #52627a;
+  line-height: 1.5;
+  min-height: 72px;
+}
+
+.producto-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.producto-card__footer strong {
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.producto-card__footer button {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background:#c5a059;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.producto-card__footer button:hover {
+  background: #c5a059;
+}

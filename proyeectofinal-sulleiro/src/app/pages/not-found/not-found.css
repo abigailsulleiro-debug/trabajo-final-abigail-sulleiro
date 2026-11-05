@@ -1,0 +1,141 @@
+/* ==========================================================================
+   PÁGINA 404 - ESTILOS PERSONALIZADOS
+   ========================================================================== */
+
+/* Variables de diseño para cambiar colores fácilmente */
+:root {
+  --bg-color: #0f172a;       /* Gris azulado muy oscuro */
+  --text-main: #ffffff;      /* Blanco */
+  --text-muted: #94a3b8;     /* Gris claro para descripciones */
+  --primary: #6366f1;        /* Índigo / Violeta brillante */
+  --primary-hover: #4f46e5;  /* Índigo más oscuro para hover */
+  --secondary: #1e293b;      /* Gris oscuro para botones secundarios */
+  --secondary-hover: #334155;
+  --border-color: #334155;
+}
+
+/* Contenedor principal centrado a pantalla completa */
+.error-container {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Bloque de contenido centralizado */
+.error-content {
+  text-align: center;
+  max-width: 540px;
+  width: 100%;
+}
+
+/* Número 404 gigante con sutil resplandor */
+.error-code {
+  font-size: clamp(5rem, 15vw, 9rem); /* Se adapta al tamaño de pantalla automáticamente */
+  font-weight: 900;
+  line-height: 1;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
+}
+
+/* Título de error */
+.error-title {
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+/* Texto descriptivo */
+.error-description {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+/* Contenedor de botones (flexbox responsivo) */
+.error-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Estilos base de botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Botón principal (Inicio) */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--text-main);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Botón secundario (Reportar) */
+.btn-secondary {
+  background-color: var(--secondary);
+  color: #e2e8f0;
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* Footer / Enlaces extra al final */
+.error-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(51, 65, 85, 0.5);
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.footer-link {
+  color: #818cf8;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Pantallas medianas y grandes)
+   ========================================================================== */
+@media (min-width: 640px) {
+  .error-actions {
+    flex-direction: row; /* Los botones se ponen uno al lado del otro en PC */
+  }
+  
+  .btn {
+    width: auto;
+  }
+}

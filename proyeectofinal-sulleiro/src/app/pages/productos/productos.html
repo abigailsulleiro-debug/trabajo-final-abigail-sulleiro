@@ -1,0 +1,34 @@
+<section class="productos">
+  <header class="productos__encabezado">
+    <div class="productos__eyebrow">Colección oficial Real Madrid</div>
+    <h1>Nuestros productos:</h1>
+    <p>Descubre la mejor indumentaria y accesorios del mejor club del mundo.</p>
+  </header>
+
+  <div class="productos__grid">
+    @for (producto of productos; track producto.id) {
+      <app-producto-card
+        [producto]="producto"
+        (agregar)="agregarAlCarrito($event)"
+      ></app-producto-card>
+    }
+  </div>
+
+  <aside class="productos__carrito">
+    <h2>Carrito</h2>
+
+    @if (carrito.length) {
+      <ul>
+        @for (item of carrito; track item.id) {
+          <li>{{ item.nombre }} - ${{ item.precio }}</li>
+        }
+      </ul>
+    } @else {
+      <p>No hay productos en tu carrito.</p>
+    }
+
+    <p class="productos__total">
+      Total: ${{ carrito.reduce((total, item) => total + item.precio, 0) }}
+    </p>
+  </aside>
+</section>
